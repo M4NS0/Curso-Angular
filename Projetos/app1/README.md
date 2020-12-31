@@ -1,27 +1,46 @@
-# App1
+### Curso de Desenvolvimento Web com ES6, Typescript e Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.6.
+#### Aula 53
 
-## Development server
+##### Property Binding vs String Interpolation
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+```html
+    <!-- Forma normal -->
+    <img src="/assets/coracao_vazio.png">
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+    <!-- property bind -->
+    <img [src]="coracaoVazio" >
+    <img [src]="coracaoCheio" >
+    <img [src]="coracaoVazio" >
 
-## Build
+    <!-- Outros Exemplos: -->
+    <a [href]="url_link"> Link </a> 
+    <button [disabled]="desabilitado"> Link </a> 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
+    <!-- Não misturar métodos: -->
+    errado:  <img [src]="{{url_img}}">
+    certo:   <img [src]="url_img">
+    certo:   <img src="{{url_img}}"
+    
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+#### Aula 54 
+MOCK (Objetos Simulados) = Simula comportamentos de objetos reais de forma simulada
 
-## Running end-to-end tests
+> Segundo o Styleguide do Angular .model deve ser usado quando não é um componente
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
+#### Aula 58
+##### Event Biding
+Eventos disparados no template  executam métodos de classes de componentes
+componentes serão capazes de reagir conforme comandos são disparados pelo usuário
+```html
+     <textarea class="form-control" rows="3" (input)="atualizaResposta($event)"> </textarea>
+     <button type="button" class="btn btn-primary" (click)="funcao()"> Clique aqui </button>
+     <input type="text" (focus)= "funcao()">
+     <input type="text" (keyup)= "funcao()">
+     <input type="text" (input)= "funcao($event)">
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```

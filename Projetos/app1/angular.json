@@ -24,6 +24,7 @@
               "src/assets"
             ],
             "styles": [
+              "/home/m4ns0/Repositorios/Curso-Angular/Projetos/app1/node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []

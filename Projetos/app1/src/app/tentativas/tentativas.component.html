@@ -1,0 +1,10 @@
+<!-- 
+<img [src]="coracaoVazio" >
+<img [src]="coracaoCheio" >
+<img [src]="coracaoVazio" >
+-->
+
+
+<!-- Demais Comentários no Readme.md -->
+
+<img *ngFor = "let coracao of coracoes" [src]="coracao.exibeCoracao()"/>
