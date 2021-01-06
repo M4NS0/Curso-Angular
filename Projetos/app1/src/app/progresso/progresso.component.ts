@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-progresso',
@@ -6,13 +6,11 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./progresso.component.css']
 })
 export class ProgressoComponent implements OnInit {
-  // componente progresso, possui uma variavel que aceita parametros 
-  // externos definidos no momento da instancia do componente -> @Input() 
+  /* @Input é property binding passando de pai para filho */
   @Input() public progresso: number = 0;
-
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
 }
